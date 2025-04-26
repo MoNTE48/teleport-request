@@ -23,18 +23,18 @@ local S = tp.S
 minetest.register_chatcommand("tpr", {
 	description = S("Request teleport to another player"),
 	params = S("<playername> | leave playername empty to see help message"),
-	privs = {interact = true, tp = true},
+	privs = {interact = true, tp = false},
 	func = tp.tpr_send
 })
 
 minetest.register_chatcommand("tphr", {
 	description = S("Request player to teleport to you"),
 	params = S("<playername> | leave playername empty to see help message"),
-	privs = {interact = true, tp = true},
+	privs = {interact = true, tp = false},
 	func = tp.tphr_send
 })
 
-minetest.register_chatcommand("tpc", {
+--[[minetest.register_chatcommand("tpc", {
 	description = S("Teleport to coordinates"),
 	params = S("<coordinates> | leave coordinates empty to see help message"),
 	privs = {interact = true, tp_tpc = true, tp = true},
@@ -52,23 +52,23 @@ minetest.register_chatcommand("tpe", {
 	description = S("Evade Enemy"),
 	privs = {interact = true, tp_tpc = true, tp = true},
 	func = tp.tpe
-})
+})]]
 
 minetest.register_chatcommand("tpy", {
 	description = S("Accept teleport requests from another player"),
-	privs = {interact = true, tp = true},
+	privs = {interact = true, tp = false},
 	func = tp.tpr_accept
 })
 
 minetest.register_chatcommand("tpn", {
 	description = S("Deny teleport requests from another player"),
-	privs = {interact = true, tp = true},
+	privs = {interact = true, tp = false},
 	func = tp.tpr_deny
 })
 
 minetest.register_chatcommand("tpf", {
 	description = S("Show all teleport requests, made by you or to you, that are still active"),
-	privs = {interact = true, tp = true},
+	privs = {interact = true, tp = false},
 	func = function(player)
 		tp.tpf_update_time[player] = true
 		tp.list_requests(player)
@@ -78,13 +78,13 @@ minetest.register_chatcommand("tpf", {
 minetest.register_chatcommand("tpr_mute", {
 	description = S("Mutes a player: denies them from sending you teleport requests"),
 	params = S("<playername> | leave playername empty to see help message"),
-	privs = {interact = true, tp = true},
+	privs = {interact = true, tp = false},
 	func = tp.tpr_mute
 })
 
 minetest.register_chatcommand("tpr_unmute", {
 	description = S("Unmutes a player: allow them to send you teleport requests again"),
 	params = S("<playername> | leave playername empty to see help message"),
-	privs = {interact = true, tp = true},
+	privs = {interact = true, tp = false},
 	func = tp.tpr_unmute
 })

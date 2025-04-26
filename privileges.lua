@@ -26,14 +26,14 @@ minetest.register_privilege("tp", {
 	give_to_admin = true,
 })
 
-minetest.register_privilege("tp_admin", {
+--[[minetest.register_privilege("tp_admin", {
 	description = S("Gives full admin-access to a player."),
 	give_to_singleplayer = false,
 	give_to_admin = true,
-})
+})]]
 
-minetest.register_privilege("tp_tpc", {
+--[[minetest.register_privilege("tp_tpc", {
 	description = S("Allow player to teleport to coordinates (if allowed by area protection)"),
 	give_to_singleplayer = false,
 	give_to_admin = true,
-})
+})]]
