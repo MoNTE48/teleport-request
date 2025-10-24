@@ -34,26 +34,6 @@ minetest.register_chatcommand("tphr", {
 	func = tp.tphr_send
 })
 
---[[minetest.register_chatcommand("tpc", {
-	description = S("Teleport to coordinates"),
-	params = S("<coordinates> | leave coordinates empty to see help message"),
-	privs = {interact = true, tp_tpc = true, tp = true},
-	func = tp.tpc_send
-})
-
-minetest.register_chatcommand("tpj", {
-	description = S("Teleport to relative position"),
-	params = S("<axis> <distance> | leave empty to see help message"),
-	privs = {interact = true, tp_tpc = true, tp = true},
-	func = tp.tpj
-})
-
-minetest.register_chatcommand("tpe", {
-	description = S("Evade Enemy"),
-	privs = {interact = true, tp_tpc = true, tp = true},
-	func = tp.tpe
-})]]
-
 minetest.register_chatcommand("tpy", {
 	description = S("Accept teleport requests from another player"),
 	privs = {interact = true, tp = false},

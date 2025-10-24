@@ -107,7 +107,6 @@ Available options are:
 ```conf
 tp.timeout_delay = 60
 tp.enable_immediate_teleport = true
-tp_enable_tpp_command = false
 ```
 
 Those values are the default values of the mod.\
